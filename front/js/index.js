@@ -76,7 +76,7 @@ const onCreatePost = () => {
     const newPost = {
       name: $name.value,
       text: $text.value,
-      tags: tagTitles.join(""),
+      tags: tagTitles.join(" "),
     };
     PostAPI.create(newPost).then((post) => {
       posts.push(post);
